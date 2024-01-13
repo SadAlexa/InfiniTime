@@ -79,13 +79,14 @@ std::unique_ptr<Screen> SystemInfo::CreateScreen1() {
   lv_obj_t* label = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_recolor(label, true);
   lv_label_set_text_fmt(label,
-                        "#FFFF00 InfiniTime#\n\n"
-                        "#808080 Version# %ld.%ld.%ld\n"
-                        "#808080 Short Ref# %s\n"
-                        "#808080 Build date#\n"
+                        "#f38ba8 InfiniTime#\n"
+                        "##cba6f7 By Alexa# %s\n\n"
+                        "##f5c2e7 Version# %ld.%ld.%ld\n"
+                        "##f5c2e7 Short Ref# %s\n"
+                        "##f5c2e7 Build date#\n"
                         "%s\n"
                         "%s\n\n"
-                        "#808080 Bootloader# %s",
+                        "##f5c2e7 Bootloader# %s",
                         Version::Major(),
                         Version::Minor(),
                         Version::Patch(),
@@ -145,15 +146,15 @@ std::unique_ptr<Screen> SystemInfo::CreateScreen2() {
   lv_obj_t* label = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_recolor(label, true);
   lv_label_set_text_fmt(label,
-                        "#808080 Date# %04d-%02d-%02d\n"
-                        "#808080 Time# %02d:%02d:%02d\n"
-                        "#808080 Uptime#\n %02lud %02lu:%02lu:%02lu\n"
-                        "#808080 Battery# %d%%/%03imV\n"
-                        "#808080 Backlight# %s\n"
-                        "#808080 Last reset# %s\n"
-                        "#808080 Accel.# %s\n"
-                        "#808080 Touch.# %x.%x.%x\n"
-                        "#808080 Model# %s",
+                        "#f5c2e7 Date# %04d-%02d-%02d\n"
+                        "#f5c2e7 Time# %02d:%02d:%02d\n"
+                        "#f5c2e7 Uptime#\n %02lud %02lu:%02lu:%02lu\n"
+                        "#f5c2e7 Battery# %d%%/%03imV\n"
+                        "#f5c2e7 Backlight# %s\n"
+                        "#f5c2e7 Last reset# %s\n"
+                        "#f5c2e7 Accel.# %s\n"
+                        "#f5c2e7 Touch.# %x.%x.%x\n"
+                        "#f5c2e7 Model# %s",
                         dateTimeController.Year(),
                         static_cast<uint8_t>(dateTimeController.Month()),
                         dateTimeController.Day(),
@@ -187,15 +188,15 @@ std::unique_ptr<Screen> SystemInfo::CreateScreen3() {
   lv_label_set_recolor(label, true);
   const auto& bleAddr = bleController.Address();
   lv_label_set_text_fmt(label,
-                        "#808080 BLE MAC#\n"
+                        "#f5c2e7 BLE MAC#\n"
                         " %02x:%02x:%02x:%02x:%02x:%02x"
                         "\n"
                         "\n"
-                        "#808080 Memory heap#\n"
-                        " #808080 Free# %d\n"
-                        " #808080 Min free# %d\n"
-                        " #808080 Alloc err# %d\n"
-                        " #808080 Ovrfl err# %d\n",
+                        "#f5c2e7 Memory heap#\n"
+                        " #f5c2e7 Free# %d\n"
+                        " #f5c2e7 Min free# %d\n"
+                        " #f5c2e7 Alloc err# %d\n"
+                        " #f5c2e7 Ovrfl err# %d\n",
                         bleAddr[5],
                         bleAddr[4],
                         bleAddr[3],
@@ -279,10 +280,10 @@ std::unique_ptr<Screen> SystemInfo::CreateScreen5() {
                            "under the terms of\n"
                            "the GNU General\n"
                            "Public License v3\n"
-                           "#808080 Source code#\n"
-                           "#FFFF00 https://github.com/#\n"
-                           "#FFFF00 InfiniTimeOrg/#\n"
-                           "#FFFF00 InfiniTime#");
+                           "#f5c2e7 Source code#\n"
+                           "#f38ba8 https://github.com/#\n"
+                           "#f38ba8 SadAlexa/#\n"
+                           "#f38ba8 InfiniTime.git#");
   lv_label_set_align(label, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(label, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
   return std::make_unique<Screens::Label>(4, 5, label);

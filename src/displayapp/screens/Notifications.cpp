@@ -286,9 +286,9 @@ Notifications::NotificationItem::NotificationItem(const char* title,
   lv_obj_align(alert_count, nullptr, LV_ALIGN_IN_TOP_RIGHT, 0, 16);
 
   lv_obj_t* alert_type = lv_label_create(container, nullptr);
-  lv_obj_set_style_local_text_color(alert_type, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, Colors::orange);
+  lv_obj_set_style_local_text_color(alert_type, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, Colors::maroon);
   if (title == nullptr) {
-    lv_label_set_text_static(alert_type, "Notification");
+    lv_label_set_text_static(alert_type, "Notifiche");
   } else {
     // copy title to label and replace newlines with spaces
     lv_label_set_text(alert_type, title);
@@ -313,7 +313,7 @@ Notifications::NotificationItem::NotificationItem(const char* title,
       break;
     case Controllers::NotificationManager::Categories::IncomingCall: {
       lv_obj_set_height(subject_container, 108);
-      lv_label_set_text_static(alert_subject, "Incoming call from");
+      lv_label_set_text_static(alert_subject, "Chimata in arrivo da");
 
       lv_obj_t* alert_caller = lv_label_create(subject_container, nullptr);
       lv_obj_align(alert_caller, alert_subject, LV_ALIGN_OUT_BOTTOM_LEFT, 0, 0);
@@ -337,7 +337,7 @@ Notifications::NotificationItem::NotificationItem(const char* title,
       lv_obj_align(bt_reject, nullptr, LV_ALIGN_IN_BOTTOM_MID, 0, 0);
       label_reject = lv_label_create(bt_reject, nullptr);
       lv_label_set_text_static(label_reject, Symbols::phoneSlash);
-      lv_obj_set_style_local_bg_color(bt_reject, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_RED);
+      lv_obj_set_style_local_bg_color(bt_reject, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, Colors::red);
 
       bt_mute = lv_btn_create(container, nullptr);
       bt_mute->user_data = this;

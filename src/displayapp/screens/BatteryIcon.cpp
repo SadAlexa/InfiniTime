@@ -32,7 +32,7 @@ void BatteryIcon::SetBatteryPercentage(uint8_t percentage) {
     if (percentage > lowBatteryThreshold) {
       SetColor(LV_COLOR_WHITE);
     } else if (percentage > criticalBatteryThreshold) {
-      SetColor(LV_COLOR_ORANGE);
+      SetColor(Colors::red);
     } else {
       SetColor(Colors::deepOrange);
     }

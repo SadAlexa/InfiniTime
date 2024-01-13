@@ -79,7 +79,7 @@ Alarm::Alarm(Controllers::AlarmController& alarmController,
   lv_obj_set_event_cb(btnStop, btnEventHandler);
   lv_obj_set_size(btnStop, 115, 50);
   lv_obj_align(btnStop, lv_scr_act(), LV_ALIGN_IN_BOTTOM_LEFT, 0, 0);
-  lv_obj_set_style_local_bg_color(btnStop, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_RED);
+  lv_obj_set_style_local_bg_color(btnStop, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, Colors::red);
   txtStop = lv_label_create(btnStop, nullptr);
   lv_label_set_text_static(txtStop, Symbols::stop);
   lv_obj_set_hidden(btnStop, true);
@@ -245,7 +245,7 @@ void Alarm::ShowInfo() {
   lv_obj_set_width(btnMessage, 150);
   lv_obj_align(btnMessage, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
   txtMessage = lv_label_create(btnMessage, nullptr);
-  lv_obj_set_style_local_bg_color(btnMessage, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_NAVY);
+  lv_obj_set_style_local_bg_color(btnMessage, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, Colors::mauve);
 
   if (alarmController.State() == AlarmController::AlarmState::Set) {
     auto timeToAlarm = alarmController.SecondsToAlarm();
@@ -256,13 +256,13 @@ void Alarm::ShowInfo() {
     auto secToAlarm = timeToAlarm % 60;
 
     lv_label_set_text_fmt(txtMessage,
-                          "Time to\nalarm:\n%2lu Days\n%2lu Hours\n%2lu Minutes\n%2lu Seconds",
+                          "Tempo\nrimanente:\n%2lu Giorni\n%2lu Ore\n%2lu Minuti\n%2lu Secondi",
                           daysToAlarm,
                           hrsToAlarm,
                           minToAlarm,
                           secToAlarm);
   } else {
-    lv_label_set_text_static(txtMessage, "Alarm\nis not\nset.");
+    lv_label_set_text_static(txtMessage, "Sveglia\nnon\nimpostata.");
   }
 }
 
@@ -276,13 +276,13 @@ void Alarm::SetRecurButtonState() {
   using Pinetime::Controllers::AlarmController;
   switch (alarmController.Recurrence()) {
     case AlarmController::RecurType::None:
-      lv_label_set_text_static(txtRecur, "ONCE");
+      lv_label_set_text_static(txtRecur, "UNA VOLTA");
       break;
     case AlarmController::RecurType::Daily:
-      lv_label_set_text_static(txtRecur, "DAILY");
+      lv_label_set_text_static(txtRecur, "GIORNALIERA");
       break;
     case AlarmController::RecurType::Weekdays:
-      lv_label_set_text_static(txtRecur, "MON-FRI");
+      lv_label_set_text_static(txtRecur, "LUN-VEN");
   }
 }
 

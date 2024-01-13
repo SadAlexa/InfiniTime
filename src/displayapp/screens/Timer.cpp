@@ -41,7 +41,7 @@ Timer::Timer(Controllers::Timer& timerController) : timer {timerController} {
 
   lv_obj_t* btnHighlight = lv_obj_create(highlightObjectMask, nullptr);
   lv_obj_set_style_local_radius(btnHighlight, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
-  lv_obj_set_style_local_bg_color(btnHighlight, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_ORANGE);
+  lv_obj_set_style_local_bg_color(btnHighlight, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, Colors::mauve);
   lv_obj_set_size(btnHighlight, LV_HOR_RES, 50);
   lv_obj_align(btnHighlight, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, 0);
 
@@ -122,7 +122,7 @@ void Timer::Refresh() {
 void Timer::SetTimerRunning() {
   minuteCounter.HideControls();
   secondCounter.HideControls();
-  lv_label_set_text_static(txtPlayPause, "Pause");
+  lv_label_set_text_static(txtPlayPause, "Pausa");
 }
 
 void Timer::SetTimerStopped() {

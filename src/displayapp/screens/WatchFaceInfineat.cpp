@@ -9,6 +9,7 @@
 #include "components/ble/BleController.h"
 #include "components/ble/NotificationManager.h"
 #include "components/motion/MotionController.h"
+#include "displayapp/InfiniTimeTheme.h"
 
 using namespace Pinetime::Applications::Screens;
 
@@ -26,9 +27,10 @@ namespace {
     gray,
     nordBlue,
     nordGreen,
+    catppuccin,
   };
 
-  constexpr int nColors = 7; // must match number of colors in InfineatColors
+  constexpr int nColors = 8; // must match number of colors in InfineatColors
 
   constexpr int nLines = WatchFaceInfineat::nLines;
 
@@ -95,6 +97,15 @@ namespace {
                                                               LV_COLOR_MAKE(0xff, 0xff, 0xff),
                                                               LV_COLOR_MAKE(0x2f, 0xb8, 0xa2),
                                                               LV_COLOR_MAKE(0x11, 0x70, 0x5a)};
+  constexpr std::array<lv_color_t, nLines> catppuccinColors = {Colors::lavander,
+                                                                Colors::rosewater,
+                                                                Colors::flamingo,
+                                                                Colors::pink,
+                                                                Colors::mauve,
+                                                                Colors::maroon,
+                                                                Colors::red,
+                                                                Colors::peach,
+                                                                Colors::mauve};          
 
   constexpr const std::array<lv_color_t, nLines>* returnColor(colors color) {
     if (color == colors::orange) {
@@ -114,6 +125,9 @@ namespace {
     }
     if (color == colors::nordBlue) {
       return &nordBlueColors;
+    }
+    if (color == colors::catppuccin) {
+      return &catppuccinColors;
     }
     return &nordGreenColors;
   }

@@ -11,13 +11,13 @@ namespace {
   const char* ToString(Pinetime::Controllers::HeartRateController::States s) {
     switch (s) {
       case Pinetime::Controllers::HeartRateController::States::NotEnoughData:
-        return "Not enough data,\nplease wait...";
+        return "Dati non sufficienti,\naspetta per favore...";
       case Pinetime::Controllers::HeartRateController::States::NoTouch:
-        return "No touch detected";
+        return "Nessun battito rilevato";
       case Pinetime::Controllers::HeartRateController::States::Running:
-        return "Measuring...";
+        return "Sto misurando...";
       case Pinetime::Controllers::HeartRateController::States::Stopped:
-        return "Stopped";
+        return "Fermo";
     }
     return "";
   }
@@ -45,7 +45,7 @@ HeartRate::HeartRate(Controllers::HeartRateController& heartRateController, Syst
   lv_obj_align(label_hr, nullptr, LV_ALIGN_CENTER, 0, -40);
 
   label_bpm = lv_label_create(lv_scr_act(), nullptr);
-  lv_label_set_text_static(label_bpm, "Heart rate BPM");
+  lv_label_set_text_static(label_bpm, "Frequenza cardiaca");
   lv_obj_align(label_bpm, label_hr, LV_ALIGN_OUT_TOP_MID, 0, -20);
 
   label_status = lv_label_create(lv_scr_act(), nullptr);
