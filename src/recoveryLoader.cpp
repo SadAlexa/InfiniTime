@@ -81,7 +81,7 @@ void RefreshWatchdog() {
 }
 
 uint8_t displayBuffer[displayWidth * bytesPerPixel];
-static constexpr uint16_t colorMauve = 0xCBA6F7;
+static constexpr uint16_t colorMauve = 0xCD3E;
 
 unit1
 
