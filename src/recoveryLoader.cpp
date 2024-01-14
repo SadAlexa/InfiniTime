@@ -81,6 +81,9 @@ void RefreshWatchdog() {
 }
 
 uint8_t displayBuffer[displayWidth * bytesPerPixel];
+static constexpr uint16_t colorMauve = 0xCBA6F7;
+
+unit1
 
 void Process(void* /*instance*/) {
   RefreshWatchdog();
@@ -113,7 +116,7 @@ void Process(void* /*instance*/) {
     RefreshWatchdog();
   }
   NRF_LOG_INFO("Writing factory image done!");
-  DisplayProgressBar(100.0f, colorGreen);
+  DisplayProgressBar(100.0f, colorMauve);
 
   while (1) {
     asm("nop");

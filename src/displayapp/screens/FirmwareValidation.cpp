@@ -32,10 +32,10 @@ FirmwareValidation::FirmwareValidation(Pinetime::Controllers::FirmwareValidator&
   lv_obj_set_width(labelIsValidated, 240);
 
   if (validator.IsValidated()) {
-    lv_label_set_text_static(labelIsValidated, "Hi già\n##89b4fa validato# questo firmware#");
+    lv_label_set_text_static(labelIsValidated, "Hai #89b4fa validato#\nquesto firmware");
   } else {
     lv_label_set_text_static(labelIsValidated,
-                             "Per favore ##a6e3a1 Valida# questa versione or\n##f38ba8 Reset# per tornare alla versione precedente.");
+                             "Per favore #a6e3a1 Valida# questa versione o\n#f38ba8 Reset# per tornare alla versione precedente.");
 
     buttonValidate = lv_btn_create(lv_scr_act(), nullptr);
     buttonValidate->user_data = this;

@@ -60,7 +60,7 @@ Twos::Twos() {
   lv_label_set_align(scoreText, LV_ALIGN_IN_LEFT_MID);
   lv_obj_align(scoreText, nullptr, LV_ALIGN_IN_TOP_LEFT, 0, 0);
   lv_label_set_recolor(scoreText, true);
-  lv_label_set_text_fmt(scoreText, "Score #FFFF00 %i#", score);
+  lv_label_set_text_fmt(scoreText, "Score #f9e2af %i#", score);
 }
 
 Twos::~Twos() {
@@ -103,7 +103,7 @@ bool Twos::tryMerge(int newRow, int newCol, int oldRow, int oldCol) {
       if (!grid[newRow][newCol].merged) {
         grid[newRow][newCol].value *= 2;
         score += grid[newRow][newCol].value;
-        lv_label_set_text_fmt(scoreText, "Score #FFFF00 %i#", score);
+        lv_label_set_text_fmt(scoreText, "Score #f9e2af %i#", score);
         grid[oldRow][oldCol].value = 0;
         grid[newRow][newCol].merged = true;
         return true;

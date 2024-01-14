@@ -60,7 +60,7 @@ void BatteryInfo::Refresh() {
     lv_label_set_text_static(status, "Completamente carica");
   } else if (batteryPercent < 10) {
     lv_obj_set_style_local_bg_color(charging_bar, LV_BAR_PART_INDIC, LV_STATE_DEFAULT, Colors::maroon);
-    lv_label_set_text_static(status, "Batteria quasi scarica");
+    lv_label_set_text_static(status, "Quasi scarica");
   } else {
     lv_obj_set_style_local_bg_color(charging_bar, LV_BAR_PART_INDIC, LV_STATE_DEFAULT, Colors::highlight);
     lv_label_set_text_static(status, "Non in carica");

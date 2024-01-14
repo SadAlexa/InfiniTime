@@ -70,9 +70,9 @@ namespace Pinetime {
 
       uint16_t eventHandle {};
 
-      std::string artistName {"Waiting for"};
+      std::string artistName {"Aspettando le"};
       std::string albumName {};
-      std::string trackName {"track information.."};
+      std::string trackName {"info della traccia.."};
 
       bool playing {false};
 

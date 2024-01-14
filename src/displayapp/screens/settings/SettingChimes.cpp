@@ -15,9 +15,9 @@ namespace {
   };
 
   constexpr std::array<Option, 3> options = {{
-    {Pinetime::Controllers::Settings::ChimesOption::None, "Off"},
-    {Pinetime::Controllers::Settings::ChimesOption::Hours, "Every hour"},
-    {Pinetime::Controllers::Settings::ChimesOption::HalfHours, "Every 30 mins"},
+    {Pinetime::Controllers::Settings::ChimesOption::None, "Spento"},
+    {Pinetime::Controllers::Settings::ChimesOption::Hours, "Ogni ora"},
+    {Pinetime::Controllers::Settings::ChimesOption::HalfHours, "Ogni 30 min"},
   }};
 
   std::array<CheckboxList::Item, CheckboxList::MaxItems> CreateOptionArray() {

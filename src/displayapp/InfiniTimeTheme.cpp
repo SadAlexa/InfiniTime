@@ -64,7 +64,7 @@ static void basic_init() {
 
   style_init_reset(&style_label_white);
   lv_style_set_text_color(&style_label_white, LV_STATE_DEFAULT, LV_COLOR_WHITE);
-  lv_style_set_text_color(&style_label_white, LV_STATE_DISABLED, LV_COLOR_GRAY);
+  lv_style_set_text_color(&style_label_white, LV_STATE_DISABLED, Colors::lightGray);
 
   style_init_reset(&style_btn);
   lv_style_set_radius(&style_btn, LV_STATE_DEFAULT, 10);
@@ -74,7 +74,7 @@ static void basic_init() {
   lv_style_set_bg_color(&style_btn, LV_STATE_DISABLED, Colors::bgDark);
 
   lv_style_set_text_color(&style_btn, LV_STATE_DEFAULT, LV_COLOR_WHITE);
-  lv_style_set_text_color(&style_btn, LV_STATE_DISABLED, LV_COLOR_GRAY);
+  lv_style_set_text_color(&style_btn, LV_STATE_DISABLED, Colors::lightGray);
 
   lv_style_set_pad_all(&style_btn, LV_STATE_DEFAULT, LV_DPX(20));
   lv_style_set_pad_inner(&style_btn, LV_STATE_DEFAULT, LV_DPX(15));
@@ -128,7 +128,7 @@ static void basic_init() {
 
   style_init_reset(&style_sw_knob);
   lv_style_set_bg_opa(&style_sw_knob, LV_STATE_DEFAULT, LV_OPA_COVER);
-  lv_style_set_bg_color(&style_sw_knob, LV_STATE_DEFAULT, LV_COLOR_SILVER);
+  lv_style_set_bg_color(&style_sw_knob, LV_STATE_DEFAULT, Colors::lightGray);
   lv_style_set_bg_color(&style_sw_knob, LV_STATE_CHECKED, LV_COLOR_WHITE);
   lv_style_set_radius(&style_sw_knob, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
   lv_style_set_pad_all(&style_sw_knob, LV_STATE_DEFAULT, -4);
@@ -160,7 +160,7 @@ static void basic_init() {
   lv_style_set_pad_all(&style_arc_knob, LV_STATE_DEFAULT, LV_DPX(5));
 
   style_init_reset(&style_table_cell);
-  lv_style_set_border_color(&style_table_cell, LV_STATE_DEFAULT, LV_COLOR_GRAY);
+  lv_style_set_border_color(&style_table_cell, LV_STATE_DEFAULT, Colors::lightGray);
   lv_style_set_border_width(&style_table_cell, LV_STATE_DEFAULT, 1);
   lv_style_set_border_side(&style_table_cell, LV_STATE_DEFAULT, LV_BORDER_SIDE_FULL);
   lv_style_set_pad_left(&style_table_cell, LV_STATE_DEFAULT, 5);
@@ -183,7 +183,7 @@ static void basic_init() {
 
   lv_style_set_line_color(&style_lmeter, LV_STATE_DEFAULT, LV_COLOR_WHITE);
   lv_style_set_scale_grad_color(&style_lmeter, LV_STATE_DEFAULT, LV_COLOR_WHITE);
-  lv_style_set_scale_end_color(&style_lmeter, LV_STATE_DEFAULT, LV_COLOR_GRAY);
+  lv_style_set_scale_end_color(&style_lmeter, LV_STATE_DEFAULT, Colors::lightGray);
   lv_style_set_line_width(&style_lmeter, LV_STATE_DEFAULT, LV_DPX(10));
   lv_style_set_scale_end_line_width(&style_lmeter, LV_STATE_DEFAULT, LV_DPX(7));
 
@@ -217,7 +217,7 @@ static void basic_init() {
  */
 lv_theme_t* lv_pinetime_theme_init() {
   theme.color_primary = LV_COLOR_WHITE;
-  theme.color_secondary = LV_COLOR_GRAY;
+  theme.color_secondary = Colors::lightGray;
   theme.font_small = &jetbrains_mono_bold_20;
   theme.font_normal = &jetbrains_mono_bold_20;
   theme.font_subtitle = &jetbrains_mono_bold_20;

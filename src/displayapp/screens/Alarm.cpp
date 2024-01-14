@@ -245,7 +245,7 @@ void Alarm::ShowInfo() {
   lv_obj_set_width(btnMessage, 150);
   lv_obj_align(btnMessage, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
   txtMessage = lv_label_create(btnMessage, nullptr);
-  lv_obj_set_style_local_bg_color(btnMessage, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, Colors::mauve);
+  lv_obj_set_style_local_bg_color(btnMessage, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, Colors::bg);
 
   if (alarmController.State() == AlarmController::AlarmState::Set) {
     auto timeToAlarm = alarmController.SecondsToAlarm();
@@ -262,7 +262,7 @@ void Alarm::ShowInfo() {
                           minToAlarm,
                           secToAlarm);
   } else {
-    lv_label_set_text_static(txtMessage, "Sveglia\nnon\nimpostata.");
+    lv_label_set_text_static(txtMessage, "Sveglia\nnon\nimpostata");
   }
 }
 
@@ -279,7 +279,7 @@ void Alarm::SetRecurButtonState() {
       lv_label_set_text_static(txtRecur, "UNA VOLTA");
       break;
     case AlarmController::RecurType::Daily:
-      lv_label_set_text_static(txtRecur, "GIORNALIERA");
+      lv_label_set_text_static(txtRecur, "AL GIORNO");
       break;
     case AlarmController::RecurType::Weekdays:
       lv_label_set_text_static(txtRecur, "LUN-VEN");

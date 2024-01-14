@@ -69,8 +69,8 @@ SettingSetTime::SettingSetTime(Pinetime::Controllers::DateTime& dateTimeControll
   lv_obj_align(btnSetTime, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, 0);
   lblSetTime = lv_label_create(btnSetTime, nullptr);
   lv_label_set_text_static(lblSetTime, "Imposta");
-  lv_obj_set_style_local_bg_color(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, Colors::maroon);
-  lv_obj_set_style_local_text_color(lblSetTime, LV_LABEL_PART_MAIN, LV_STATE_DISABLED, LV_COLOR_GRAY);
+  lv_obj_set_style_local_bg_color(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, Colors::highlight);
+  lv_obj_set_style_local_text_color(lblSetTime, LV_LABEL_PART_MAIN, LV_STATE_DISABLED, Colors::lightGray);
   lv_obj_set_event_cb(btnSetTime, SetTimeEventHandler);
 
   UpdateScreen();
@@ -93,7 +93,7 @@ void SettingSetTime::UpdateScreen() {
 void SettingSetTime::SetTime() {
   const int hoursValue = hourCounter.GetValue();
   const int minutesValue = minuteCounter.GetValue();
-  NRF_LOG_INFO("Setting time (manually) to %02d:%02d:00", hoursValue, minutesValue);
+  NRF_LOG_INFO("Set time (manually) to %02d:%02d:00", hoursValue, minutesValue);
   dateTimeController.SetTime(dateTimeController.Year(),
                              static_cast<uint8_t>(dateTimeController.Month()),
                              dateTimeController.Day(),

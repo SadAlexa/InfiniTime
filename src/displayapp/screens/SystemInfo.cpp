@@ -80,13 +80,13 @@ std::unique_ptr<Screen> SystemInfo::CreateScreen1() {
   lv_label_set_recolor(label, true);
   lv_label_set_text_fmt(label,
                         "#f38ba8 InfiniTime#\n"
-                        "##cba6f7 By Alexa# %s\n\n"
-                        "##f5c2e7 Version# %ld.%ld.%ld\n"
-                        "##f5c2e7 Short Ref# %s\n"
-                        "##f5c2e7 Build date#\n"
+                        "#cba6f7 By Alexa#\n\n"
+                        "#f5c2e7 Version# %ld.%ld.%ld\n"
+                        "#f5c2e7 Short Ref# %s\n"
+                        "#f5c2e7 Build date#\n"
                         "%s\n"
                         "%s\n\n"
-                        "##f5c2e7 Bootloader# %s",
+                        "#f5c2e7 Bootloader# %s",
                         Version::Major(),
                         Version::Minor(),
                         Version::Patch(),
