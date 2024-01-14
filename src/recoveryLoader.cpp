@@ -83,7 +83,6 @@ void RefreshWatchdog() {
 uint8_t displayBuffer[displayWidth * bytesPerPixel];
 static constexpr uint16_t colorMauve = 0xCD3E;
 
-unit1
 
 void Process(void* /*instance*/) {
   RefreshWatchdog();
