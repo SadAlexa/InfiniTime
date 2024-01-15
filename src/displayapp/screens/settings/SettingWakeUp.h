@@ -26,11 +26,11 @@ namespace Pinetime {
 
         Controllers::Settings& settingsController;
         static constexpr std::array<Option, 5> options = {{
-          {Controllers::Settings::WakeUpMode::SingleTap, "Single Tap"},
-          {Controllers::Settings::WakeUpMode::DoubleTap, "Double Tap"},
-          {Controllers::Settings::WakeUpMode::RaiseWrist, "Raise Wrist"},
-          {Controllers::Settings::WakeUpMode::Shake, "Shake Wake"},
-          {Controllers::Settings::WakeUpMode::LowerWrist, "Lower Wrist"},
+          {Controllers::Settings::WakeUpMode::SingleTap, "Tap Singolo"},
+          {Controllers::Settings::WakeUpMode::DoubleTap, "Tap Doppio"},
+          {Controllers::Settings::WakeUpMode::RaiseWrist, "Solleva"},
+          {Controllers::Settings::WakeUpMode::Shake, "Scuoti"},
+          {Controllers::Settings::WakeUpMode::LowerWrist, "Abbassa"},
         }};
 
         lv_obj_t* cbOption[options.size()];

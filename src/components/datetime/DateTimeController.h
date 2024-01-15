@@ -15,7 +15,7 @@ namespace Pinetime {
     class DateTime {
     public:
       DateTime(Controllers::Settings& settingsController);
-      enum class Days : uint8_t { Unknown, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
+      enum class Days : uint8_t { Unknown, Lunedi, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
       enum class Months : uint8_t {
         Unknown,
         January,
