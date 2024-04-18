@@ -5,8 +5,8 @@
 using namespace Pinetime::Controllers;
 
 namespace {
-  char const* DaysStringShort[] = {"--", "LU", "MA", "ME", "GI", "VE", "SA", "DO"}; // 3 letters
-  char const* DaysStringShortLow[] = {"--", "Lu", "Ma", "Me", "Gi", "Ve", "Sa", "Do"};
+  char const* DaysStringShort[] = {"--", "LUN", "MAR", "MER", "GIO", "VEN", "SAB", "DOM"};
+  char const* DaysStringShortLow[] = {"--", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"};
   char const* MonthsString[] = {"--", "GEN", "FEB", "MAR", "APR", "MAG", "GIU", "LUG", "AGO", "SET", "OTT", "NOV", "DIC"};
   char const* MonthsStringLow[] = {"--", "Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"};
 }
