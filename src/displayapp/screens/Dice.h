@@ -5,6 +5,7 @@
 #include "displayapp/widgets/Counter.h"
 #include "displayapp/Controllers.h"
 #include "Symbols.h"
+#include "displayapp/InfiniTimeTheme.h"
 
 #include <array>
 #include <random>
@@ -31,7 +32,7 @@ namespace Pinetime {
 
         std::mt19937 gen;
 
-        std::array<lv_color_t, 3> resultColors = {LV_COLOR_YELLOW, LV_COLOR_MAGENTA, LV_COLOR_AQUA};
+        std::array<lv_color_t, 3> resultColors = {Colors::yellow, Colors::red, Colors::teal};
         uint8_t currentColorIndex;
         void NextColor();
 
