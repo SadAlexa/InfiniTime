@@ -19,20 +19,20 @@ namespace Pinetime {
         Silver,
         Gray,
         Black,
+        Rosewater,
+        Flamingo,
+        Pink,
+        Mauve,
         Red,
         Maroon,
+        Peach,
         Yellow,
-        Olive,
-        Lime,
         Green,
-        Cyan,
         Teal,
+        Sky,
+        Sapphire,
         Blue,
-        Navy,
-        Magenta,
-        Purple,
-        Orange,
-        Pink
+        Lavander,
       };
       enum class PTSGaugeStyle : uint8_t { Full, Half, Numeric };
       enum class PTSWeather : uint8_t { On, Off };
